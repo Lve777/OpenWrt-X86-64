@@ -34,9 +34,6 @@ env:
   TZ: Asia/Shanghai
 
 jobs:
-   test:
-    runs-on: ubuntu-latest
-    timeout-minutes: 480
    build:
     runs-on: ubuntu-20.04
 
@@ -191,3 +188,7 @@ jobs:
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+     test:
+      runs-on: ubuntu-latest
+       timeout-minutes: 480
